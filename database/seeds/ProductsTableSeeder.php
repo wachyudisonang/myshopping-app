@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Product;
+use App\TestProduct;
 
 class ProductsTableSeeder extends Seeder
 {
@@ -13,7 +13,7 @@ class ProductsTableSeeder extends Seeder
 
         // Create 50 product records
         for ($i = 0; $i < 8; $i++) {
-            Product::create([
+            TestProduct::create([
                 'title' => $faker->sentence($nbWords = 4, $variableNbWords = true),
                 'description' => $faker->paragraph,
                 'price' => $faker->randomNumber(2),

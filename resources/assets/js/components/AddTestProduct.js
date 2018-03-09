@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-class AddProduct extends Component {
+class AddTestProduct extends Component {
 
   constructor(props) {
     super(props);
        /* Initialize the state. */
        this.state = {
           newProduct: {
-              Name: '',
-              Key: '',
-              ProductType: 0,
-              Unit: 0
+              title: '',
+              description: '',
+              price: 0,
+              availability: 0
           }
         }
     
@@ -62,24 +62,19 @@ class AddProduct extends Component {
         <form onSubmit={this.handleSubmit}>
 
           <label> 
-            Name: 
+            Title: 
             {/*On every keystroke, the handeInput method is invoked */}
-            <input style={inputStyle} type="text" onChange={(e)=>this.handleInput('Name',e)} />
+            <input style={inputStyle} type="text" onChange={(e)=>this.handleInput('title',e)} />
           </label>
           
           <label> 
-            Key: 
-            <input style={inputStyle}  type="text" onChange={(e)=>this.handleInput('Key',e)} />
-          </label>
-          
-          <label> 
-            Product Type: 
-            <input style={inputStyle}  type="text" onChange={(e)=>this.handleInput('ProductType',e)} />
+            Description: 
+            <input style={inputStyle}  type="text" onChange={(e)=>this.handleInput('description',e)} />
           </label>
           
           <label>
-            Unit:
-            <input style={inputStyle}  type="number" onChange={(e)=>this.handleInput('Unit', e)}/>
+            Price:
+            <input style={inputStyle}  type="number" onChange={(e)=>this.handleInput('price', e)}/>
           </label>
 
           <input style={inputStyle}  type="submit" value="Submit" />
@@ -89,5 +84,5 @@ class AddProduct extends Component {
   }
 }
 
-export default AddProduct;
+export default AddTestProduct;
   

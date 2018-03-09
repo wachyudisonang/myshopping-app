@@ -21,10 +21,10 @@ class ProductsController extends Controller
 	public function store(Request $request)
     {
 		$this->validate($request, [
-        'title' => 'required|unique:products|max:255',
-        'description' => 'required',
-        'price' => 'integer',
-        'availability' => 'boolean',
+        'Name' => 'required|unique:products|max:255',
+        'Key' => 'required|unique:products|max:255',
+        'ProductType' => 'integer',
+        'Unit' => 'integer',
     ]);
 	    $product = Product::create($request->all());
 

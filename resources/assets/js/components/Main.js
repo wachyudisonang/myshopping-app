@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import TestProduct from './TestProduct';
 import Product from './Product';
 import AddProduct from './AddProduct';
+import AddTestProduct from './AddTestProduct';
 
 /* Main Component */
 class Main extends Component {
@@ -45,7 +47,7 @@ class Main extends Component {
             */
             <li style={listStyle} onClick={
                 () =>this.handleClick(product)} key={product.id} >
-                { product.title } 
+                { product.Name } 
             </li>      
         );
     })
@@ -106,6 +108,8 @@ class Main extends Component {
     return (
         <div>
           <div style= {mainDivStyle}>
+			<AddProduct onAdd={this.handleAddProduct} /> 
+			{/* <AddTestProduct onAdd={this.handleAddProduct} />  */}
             <div style={divStyle}>
                 <h3> All products </h3>
                   <ul>
@@ -113,8 +117,8 @@ class Main extends Component {
                   </ul> 
 
             </div> 
-                <Product product={this.state.currentProduct} />
-                <AddProduct onAdd={this.handleAddProduct} /> 
+			<Product product={this.state.currentProduct} />
+			{/* <TestProduct product={this.state.currentProduct} /> */}
           </div>
               
         </div>
