@@ -4,8 +4,10 @@
 
 composer install
 composer update
+php artisan migrate
 php artisan db:seed --class=ProductsTableSeeder
 npm install && npm run dev
+npm i -g npm-check-updates && ncu -a && npm i
 
 You need to have all the laravel dependencies and npm/yarn to use this demo. First clone the repo or download it as a zip. 
 Next, make sure that you're on the right branch. If you're here just for the Laravel API, you should be looking at `laravelapi`. If you're here for Laravel + React code, `master` branch is all you need.
